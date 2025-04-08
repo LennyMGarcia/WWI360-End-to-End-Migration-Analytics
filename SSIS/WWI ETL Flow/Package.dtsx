@@ -1,0 +1,886 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/6/2025 11:33:23 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-2KOL6QD"
+  DTS:CreatorName="DESKTOP-2KOL6QD\User"
+  DTS:DTSID="{1C0537E8-9265-4E6C-B869-0897699237F3}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="2058"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="56"
+  DTS:VersionGUID="{18D6F980-AFBB-48D5-8EC3-EA8D9A8455F9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-2KOL6QD\MSSQLSERVER01.WideWorldImporters]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{05498E67-2029-4B73-B10C-809C6C29EC02}"
+      DTS:ObjectName="DESKTOP-2KOL6QD\MSSQLSERVER01.WideWorldImporters">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-2KOL6QD\MSSQLSERVER01;Initial Catalog=WideWorldImporters;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{05498E67-2029-4B73-B10C-809C6C29EC02}DESKTOP-2KOL6QD\MSSQLSERVER01.WideWorldImporters;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SAP HANA CLOUD.UPS_GRANTOR]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{406FF0F4-DD8B-4B63-9048-E87F7AEC434D}"
+      DTS:ObjectName="SAP HANA CLOUD.UPS_GRANTOR">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=UPS_GRANTOR;Dsn=SAP HANA CLOUD;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3Er/iFYyLky270fm3hsVqgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADUDxdg3Kh2Rav4lHxmJWUFCJ+m0Lfq6/RrFm4p6Hf8rAAAAAAOgAAAAAIAACAAAAAkeX2hWEeVwpNNwuMX0GTUArMttmCwO2sG5nXnT4SBASAAAAB8gtJzETsEPQfRtKDnyjUKefx8WPtseUiDFoyehpTEm0AAAAC8gVzPTt18ajCOg+wzccd3pbGW79o81MtOjTvWkWt9FGnZC4EOAURqspU01nGE7eNeDAVcp//LISQNuTzVCGzt</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SAP HANA CLOUD.UPS_GRANTOR 1]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{41324B09-3C12-4B21-A27C-055212B29CE3}"
+      DTS:ObjectName="SAP HANA CLOUD.UPS_GRANTOR 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=UPS_GRANTOR;Dsn=SAP HANA CLOUD;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3Er/iFYyLky270fm3hsVqgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADTfLsCpa6DwxwJ8fiwVbxhfkTSR6RX/71UFEgpsIAzqwAAAAAOgAAAAAIAACAAAADpft715TKSyz2cQImCt06oB5ZDxvD82dVfdq2UlkBJAyAAAAD+EtgZgL56ddApVfaqyoZNtbb+kjd/hdtoEISsEn2r5EAAAAAp2D1UO1x/th56HDnq24QMXJLqbJcg11Xpou+dbCJ3CmngS8e/93kJMZGQkd6DIvxpS1EphIOgOTpUm50axTTu</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[sap hana.UPS_GRANTOR]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{FEB54666-AC99-46FC-AFBE-440D1E0F71E5}"
+      DTS:ObjectName="sap hana.UPS_GRANTOR">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=UPS_GRANTOR;Dsn=sap hana;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3Er/iFYyLky270fm3hsVqgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACsPTb5P65APqMEm69JQqsWLiAzKXg61OL0bGT9Sdx9PQAAAAAOgAAAAAIAACAAAABr3gfnlaVR2sIi7gLpK8+wmlrXs+40avBH1en/GHkUeCAAAAAr4+6uiHcREMe2ezojea/DnOdoc3tufthxbc9fJwGPsUAAAABRzOGcL5/8squdqs4ZJfku+9RtT5pWrCseNAeOoSYNlJbXgJK8mwVA1kx111qN3yBl5x+k3N0zNVRe237Ku48v</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{391A55CD-3A9C-47C8-8821-AF1F34796DA1}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="name_of_table">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2DAAB0A3-6D81-4E95-88C1-FFB292D00167}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="name_table">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6D02D6F8-B946-4928-877F-E7353DD08F70}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="table_names">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{CE239181-D9C1-4581-98E4-F5C743E3BB73}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="table_names1">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"> </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{228E514C-E213-45BB-9C1A-3D970316D5D7}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="t_name">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{C113C6C5-3B3D-42DB-9062-226AF205DF98}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Destination SAP Hana DB"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Destination"
+              name="Destination SAP Hana DB"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"DBADMIN"."Website.Customers"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">100</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Destination SAP Hana DB.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[sap hana.UPS_GRANTOR]"
+                  connectionManagerRefId="Package.ConnectionManagers[sap hana.UPS_GRANTOR]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ODBC Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].Columns[CustomerID]"
+                      cachedDataType="i4"
+                      cachedName="CustomerID"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[CUSTOMERID]"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].Columns[CustomerName]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="CustomerName"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[CUSTOMERNAME]"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[CustomerName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].Columns[CustomerCategoryName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CustomerCategoryName"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[CUSTOMERCATEGORYNAME]"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[CustomerCategoryName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].Columns[PrimaryContact]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PrimaryContact"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[PRIMARYCONTACT]"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[PrimaryContact]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].Columns[AlternateContact]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="AlternateContact"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[ALTERNATECONTACT]"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[AlternateContact]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].Columns[PhoneNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="PhoneNumber"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[PHONENUMBER]"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[PhoneNumber]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].Columns[FaxNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="FaxNumber"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[FAXNUMBER]"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[FaxNumber]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].Columns[BuyingGroupName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="BuyingGroupName"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[BUYINGGROUPNAME]"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[BuyingGroupName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].Columns[WebsiteURL]"
+                      cachedDataType="wstr"
+                      cachedLength="256"
+                      cachedName="WebsiteURL"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[WEBSITEURL]"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[WebsiteURL]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].Columns[DeliveryMethod]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DeliveryMethod"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[DELIVERYMETHOD]"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[DeliveryMethod]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].Columns[CityName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CityName"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[CITYNAME]"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[CityName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].Columns[DeliveryRun]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="DeliveryRun"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[DELIVERYRUN]"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[DeliveryRun]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].Columns[RunPosition]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="RunPosition"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[RUNPOSITION]"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[RunPosition]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[CUSTOMERID]"
+                      dataType="i4"
+                      name="CUSTOMERID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[CUSTOMERNAME]"
+                      dataType="wstr"
+                      length="100"
+                      name="CUSTOMERNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[CUSTOMERCATEGORYNAME]"
+                      dataType="wstr"
+                      length="50"
+                      name="CUSTOMERCATEGORYNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[PRIMARYCONTACT]"
+                      dataType="wstr"
+                      length="50"
+                      name="PRIMARYCONTACT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[ALTERNATECONTACT]"
+                      dataType="wstr"
+                      length="50"
+                      name="ALTERNATECONTACT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[PHONENUMBER]"
+                      dataType="wstr"
+                      length="20"
+                      name="PHONENUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[FAXNUMBER]"
+                      dataType="wstr"
+                      length="20"
+                      name="FAXNUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[BUYINGGROUPNAME]"
+                      dataType="wstr"
+                      length="50"
+                      name="BUYINGGROUPNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[WEBSITEURL]"
+                      dataType="wstr"
+                      length="256"
+                      name="WEBSITEURL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[DELIVERYMETHOD]"
+                      dataType="wstr"
+                      length="50"
+                      name="DELIVERYMETHOD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[CITYNAME]"
+                      dataType="wstr"
+                      length="50"
+                      name="CITYNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[DELIVERYLOCATION]"
+                      dataType="wstr"
+                      length="1000"
+                      name="DELIVERYLOCATION" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[DELIVERYRUN]"
+                      dataType="wstr"
+                      length="5"
+                      name="DELIVERYRUN" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input].ExternalColumns[RUNPOSITION]"
+                      dataType="wstr"
+                      length="5"
+                      name="RUNPOSITION" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Destination SAP Hana DB.Outputs[ODBC Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ODBC Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Destination SAP Hana DB.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Destination SAP Hana DB.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Destination SAP Hana DB.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Source SQL Server DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source SQL Server DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Website].[Customers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable">User::name_of_table</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT name FROM sys.tables;</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Source SQL Server DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-2KOL6QD\MSSQLSERVER01.WideWorldImporters]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-2KOL6QD\MSSQLSERVER01.WideWorldImporters]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[CustomerID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[CustomerName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[CustomerName]"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[CustomerName]"
+                      name="CustomerName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[CustomerCategoryName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[CustomerCategoryName]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[CustomerCategoryName]"
+                      name="CustomerCategoryName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[PrimaryContact]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[PrimaryContact]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[PrimaryContact]"
+                      name="PrimaryContact"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[AlternateContact]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[AlternateContact]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[AlternateContact]"
+                      name="AlternateContact"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[PhoneNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[PhoneNumber]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[PhoneNumber]"
+                      name="PhoneNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[FaxNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[FaxNumber]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[FaxNumber]"
+                      name="FaxNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[BuyingGroupName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[BuyingGroupName]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[BuyingGroupName]"
+                      name="BuyingGroupName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[WebsiteURL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[WebsiteURL]"
+                      length="256"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[WebsiteURL]"
+                      name="WebsiteURL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[DeliveryMethod]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[DeliveryMethod]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[DeliveryMethod]"
+                      name="DeliveryMethod"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[CityName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[CityName]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[CityName]"
+                      name="CityName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[DeliveryLocation]"
+                      dataType="image"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[DeliveryLocation]"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[DeliveryLocation]"
+                      name="DeliveryLocation"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[DeliveryRun]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[DeliveryRun]"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[DeliveryRun]"
+                      name="DeliveryRun"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[RunPosition]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[RunPosition]"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].Columns[RunPosition]"
+                      name="RunPosition"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
+                      dataType="i4"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[CustomerName]"
+                      dataType="wstr"
+                      length="100"
+                      name="CustomerName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[CustomerCategoryName]"
+                      dataType="wstr"
+                      length="50"
+                      name="CustomerCategoryName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[PrimaryContact]"
+                      dataType="wstr"
+                      length="50"
+                      name="PrimaryContact" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[AlternateContact]"
+                      dataType="wstr"
+                      length="50"
+                      name="AlternateContact" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[PhoneNumber]"
+                      dataType="wstr"
+                      length="20"
+                      name="PhoneNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[FaxNumber]"
+                      dataType="wstr"
+                      length="20"
+                      name="FaxNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[BuyingGroupName]"
+                      dataType="wstr"
+                      length="50"
+                      name="BuyingGroupName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[WebsiteURL]"
+                      dataType="wstr"
+                      length="256"
+                      name="WebsiteURL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[DeliveryMethod]"
+                      dataType="wstr"
+                      length="50"
+                      name="DeliveryMethod" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[CityName]"
+                      dataType="wstr"
+                      length="50"
+                      name="CityName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[DeliveryLocation]"
+                      dataType="image"
+                      name="DeliveryLocation" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[DeliveryRun]"
+                      dataType="wstr"
+                      length="5"
+                      name="DeliveryRun" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output].ExternalColumns[RunPosition]"
+                      dataType="wstr"
+                      length="5"
+                      name="RunPosition" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
+                      name="CustomerID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[CustomerName]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[CustomerName]"
+                      name="CustomerName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[CustomerCategoryName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[CustomerCategoryName]"
+                      name="CustomerCategoryName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[PrimaryContact]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[PrimaryContact]"
+                      name="PrimaryContact" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[AlternateContact]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[AlternateContact]"
+                      name="AlternateContact" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[PhoneNumber]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[PhoneNumber]"
+                      name="PhoneNumber" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[FaxNumber]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[FaxNumber]"
+                      name="FaxNumber" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[BuyingGroupName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[BuyingGroupName]"
+                      name="BuyingGroupName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[WebsiteURL]"
+                      dataType="wstr"
+                      length="256"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[WebsiteURL]"
+                      name="WebsiteURL" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[DeliveryMethod]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[DeliveryMethod]"
+                      name="DeliveryMethod" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[CityName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[CityName]"
+                      name="CityName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[DeliveryLocation]"
+                      dataType="image"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[DeliveryLocation]"
+                      name="DeliveryLocation" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[DeliveryRun]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[DeliveryRun]"
+                      name="DeliveryRun" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[RunPosition]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[RunPosition]"
+                      name="RunPosition" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Destination SAP Hana DB.Inputs[ODBC Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\Source SQL Server DB.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="130,118" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="198,42"
+          Id="Package\Data Flow Task\Destination SAP Hana DB"
+          TopLeft="168,228" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Data Flow Task\Source SQL Server DB"
+          TopLeft="169,59" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="264,101">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,127"
+              Start="0,0"
+              End="0,119.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,119.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Destination SAP Hana DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Source SQL Server DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

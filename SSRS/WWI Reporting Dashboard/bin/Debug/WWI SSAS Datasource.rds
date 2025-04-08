@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="WWI SSAS Datasource">
+  <ConnectionProperties>
+    <Extension>OLEDB-MD</Extension>
+    <ConnectString>Data Source=desktop-2kol6qd;Initial Catalog="WWI Insight Hub"</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>98cd635a-3f31-478a-9508-39acd2840773</DataSourceID>
+</RptDataSource>

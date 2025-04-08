@@ -1,0 +1,20 @@
+
+**** Log file opened at 2025-04-07 21:41:04.583768 UTC-04:00 (Hora estándar oeste, Sudamérica), Encoding UTF-8
+NW RFC Library: SDK variant, Release 750 Patch Level 12
+Compilation date          : Jul  7 2023 22:54:54
+CPIC library              : 753.2023.07.06 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1216
+Current working directory : C:\Users\User\Desktop\practica\WWI360 End to End Migration & Analytics\Reports
+Program                   : crw64
+Process ID                : 26628
+User                      : User
+Hardware                  : PC with Windows NT 8x AMD64 Level 23 (Mod 17 Step 0)
+Operating_system          : Windows NT 10.0
+Hostname                  : DESKTOP-2KOL6QD
+IP address                : 10.0.0.37
+IPv6 address              : fe80::5bff:c349:5630:78d6
+Global trace level        : 0
+
+2025-04-07 21:41:04.566202 [16236] >> Info entry
+	Did not find config file C:\Users\User\Desktop\practica\WWI360 End to End Migration & Analytics\Reports\sapnwrfc.ini.
