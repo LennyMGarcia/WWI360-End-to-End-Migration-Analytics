@@ -282,4 +282,6 @@ EXEC sp_addsubscription
   @subscription_type = 'push';
 ```
 
-
+## Thanks for reading guys!
+##
+##
